@@ -20,6 +20,11 @@ mobileMenuBtn?.addEventListener('click', () => {
 mobileNavOverlay?.addEventListener('click', closeMobileNav);
 mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
 
+// Close mobile menu on scroll (keeps header consistent)
+window.addEventListener('scroll', () => {
+  if (mobileNav?.classList.contains('open')) closeMobileNav();
+}, { passive: true });
+
 // Scroll car - drives across bottom as you scroll
 const scrollCar = document.getElementById('scroll-car');
 if (scrollCar) {
@@ -58,8 +63,8 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
 
-// 3D tilt on cards
-document.querySelectorAll('.product-card, .category-card, .showcase-card').forEach((card) => {
+// 3D tilt on cards (desktop only)
+document.querySelectorAll('.product-card, .showcase-card').forEach((card) => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
