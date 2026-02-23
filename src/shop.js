@@ -17,7 +17,7 @@ function renderProductCard(p) {
   return `
     <article class="product-card" data-id="${p.id}">
       <a href="shop.html?id=${p.id}" class="product-image">
-        <span>${p.emoji}</span>
+        <img src="${p.image}" alt="${p.name}" loading="lazy" />
         ${p.badge ? `<span class="product-badges"><span class="product-badge ${p.badge}">${p.badge}</span></span>` : ''}
       </a>
       <div class="product-info">
@@ -99,7 +99,7 @@ function renderCartItems() {
     const p = products.find(x => x.id === item.id) || item;
     return `
       <div class="cart-item" style="display:flex;gap:1rem;padding:1rem;border-bottom:1px solid var(--border);">
-        <span style="font-size:2rem">${p.emoji || '📦'}</span>
+        <img src="${p.image || 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&h=80&fit=crop'}" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:8px;" />
         <div style="flex:1"><strong>${p.name}</strong><p style="color:var(--text-muted);font-size:0.9rem;">₹${p.price} × ${item.qty || 1}</p></div>
         <button class="remove-from-cart" data-id="${p.id}" style="background:none;border:none;color:var(--text-muted);cursor:pointer;">×</button>
       </div>
