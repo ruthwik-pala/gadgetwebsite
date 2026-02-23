@@ -53,9 +53,9 @@
       </div>
     </section>
 
-    <section class="section categories">
+    <section class="section categories" data-reveal>
       <h2 class="section-title">Shop by Category</h2>
-      <div class="category-grid">
+      <div class="category-grid" data-stagger>
         <a href="shop.html?cat=phone-cases" class="category-card category-card-img" style="--cat-img: url('https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=600&h=400&fit=crop')">
           <div class="category-overlay"></div>
           <h3>Phone Cases</h3>
@@ -79,15 +79,15 @@
       </div>
     </section>
 
-    <section class="section featured">
+    <section class="section featured" data-reveal>
       <h2 class="section-title">Featured Products</h2>
-      <div class="product-grid" id="featured-products">
+      <div class="product-grid" id="featured-products" data-stagger>
         <!-- Filled by JS -->
       </div>
       <a href="shop.html" class="btn btn-outline">View All Products</a>
     </section>
 
-    <section class="section cta">
+    <section class="section cta" data-reveal>
       <div class="cta-content">
         <h2>Visit Our Stores</h2>
         <p>Experience our handpicked collection in person. Three locations across Hyderabad.</p>
@@ -132,5 +132,6 @@
   <div class="cart-overlay" id="cart-overlay"></div>
 
   <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/effects.js"></script>
 </body>
 </html>

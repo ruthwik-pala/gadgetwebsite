@@ -41,7 +41,7 @@
       <p>Handpicked premium electronics & accessories</p>
     </section>
 
-    <section class="section">
+    <section class="section" data-reveal>
       <div class="shop-header">
         <div class="filter-tabs" id="filter-tabs">
           <button class="active" data-cat="all">All</button>
@@ -51,7 +51,7 @@
           <button data-cat="accessories">Accessories</button>
         </div>
       </div>
-      <div class="product-grid" id="shop-products"></div>
+      <div class="product-grid" id="shop-products" data-stagger></div>
     </section>
   </main>
 
@@ -72,5 +72,6 @@
   <div class="cart-overlay" id="cart-overlay"></div>
 
   <script type="module" src="src/shop.js"></script>
+  <script type="module" src="src/effects.js"></script>
 </body>
 </html>
