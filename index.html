@@ -26,10 +26,18 @@
         <span class="badge cart-count">0</span>
       </button>
     </nav>
-    <button class="mobile-menu-btn" aria-label="Menu">
+    <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
       <span></span><span></span><span></span>
     </button>
   </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
 
   <main>
     <section class="hero">
@@ -150,6 +158,20 @@
     </div>
   </aside>
   <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Scroll progress car -->
+  <div class="scroll-car" id="scroll-car" aria-hidden="true">
+    <svg class="scroll-car-svg" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 28h60v4H10z" fill="var(--bg-elevated)"/>
+      <path d="M15 20h50l5 8H10l5-8z" fill="var(--accent)" opacity="0.9"/>
+      <path d="M20 12h40v8H20z" fill="var(--accent)"/>
+      <circle cx="22" cy="32" r="4" fill="var(--text-muted)"/>
+      <circle cx="58" cy="32" r="4" fill="var(--text-muted)"/>
+      <circle cx="22" cy="32" r="2" fill="var(--bg)"/>
+      <circle cx="58" cy="32" r="2" fill="var(--bg)"/>
+      <path d="M28 16h24v2H28z" fill="var(--bg)" opacity="0.5"/>
+    </svg>
+  </div>
 
   <script type="module" src="src/main.js"></script>
   <script type="module" src="src/effects.js"></script>

@@ -1,3 +1,39 @@
+// Mobile menu
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+
+function openMobileNav() {
+  mobileNav?.classList.add('open');
+  mobileNavOverlay?.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  mobileNav?.classList.remove('open');
+  mobileNavOverlay?.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+mobileMenuBtn?.addEventListener('click', () => {
+  mobileNav?.classList.contains('open') ? closeMobileNav() : openMobileNav();
+});
+mobileNavOverlay?.addEventListener('click', closeMobileNav);
+mobileNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
+
+// Scroll car - drives across bottom as you scroll
+const scrollCar = document.getElementById('scroll-car');
+if (scrollCar) {
+  const onScrollCar = () => {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+    scrollCar.style.setProperty('--scroll-progress', progress);
+    scrollCar.classList.toggle('hidden', progress > 0.98);
+  };
+  window.addEventListener('scroll', onScrollCar, { passive: true });
+  onScrollCar();
+}
+
 // Header shrink on scroll
 const header = document.querySelector('.header');
 if (header) {
