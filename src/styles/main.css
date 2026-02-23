@@ -397,6 +397,134 @@ img {
   50% { opacity: 0.5; transform: scaleY(0.5); }
 }
 
+/* ===== Spotlight (Die-Cast & Collectibles) ===== */
+.spotlight {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 50%, var(--bg) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.spotlight-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.spotlight-tag {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.spotlight-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.spotlight-title span {
+  color: var(--accent);
+}
+
+.spotlight-desc {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.spotlight-visual {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.showcase-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  flex: 1;
+  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-lg);
+  transition: border-color var(--transition), box-shadow var(--transition), transform 0.2s ease-out;
+  transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transform-style: preserve-3d;
+}
+
+.showcase-card:hover {
+  transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-8px) scale(1.02);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(0, 212, 170, 0.2);
+}
+
+.showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.showcase-card:hover img {
+  transform: scale(1.08);
+}
+
+.showcase-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  pointer-events: none;
+}
+
+.spotlight-car-secondary {
+  width: 45%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 1;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.spotlight-car-secondary:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.spotlight-car-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .spotlight-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .spotlight-visual {
+    justify-content: center;
+  }
+  .spotlight-car-secondary {
+    display: none;
+  }
+}
+
 /* ===== Sections ===== */
 .section {
   padding: 6rem 2rem;

@@ -23,7 +23,7 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
 
 // 3D tilt on cards
-document.querySelectorAll('.product-card, .category-card').forEach((card) => {
+document.querySelectorAll('.product-card, .category-card, .showcase-card').forEach((card) => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
