@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | GADGET360 | Premium Electronics &amp; Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">GADGET<span>360</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="icon-btn wishlist-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="badge wishlist-count">0</span></button>
+      <button class="icon-btn cart-btn"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge cart-count">0</span></button>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <h1>Get in Touch</h1>
+      <p>We're here to help with your tech needs.</p>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>📞 Call Us</h3>
+          <p><a href="tel:9848014599">9848014599</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>📍 Visit Us</h3>
+          <p>Three stores across Hyderabad — <a href="about.html#stores">View locations</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>✉️ Support</h3>
+          <p>Visit any of our stores or call for assistance</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><span class="logo">GADGET<span>360</span></span><p>Premium Electronics & Accessories</p></div>
+      <div><h4>Quick Links</h4><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><p>9848014599</p><p>Hyderabad, India</p></div>
+    </div>
+    <p class="footer-copy">© GADGET360 — Curated, not crowded.</p>
+  </footer>
+
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header"><h3>Your Cart</h3><button class="close-cart" aria-label="Close">×</button></div>
+    <div class="cart-items" id="cart-items"><p class="cart-empty">Your cart is empty</p></div>
+    <div class="cart-footer"><a href="checkout.html" class="btn btn-primary btn-block">Checkout</a></div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

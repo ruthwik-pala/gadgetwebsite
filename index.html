@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GADGET360 | Premium Electronics &amp; Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">GADGET<span>360</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="badge wishlist-count">0</span>
+      </button>
+      <button class="icon-btn cart-btn" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="badge cart-count">0</span>
+      </button>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-tagline">Experience the Future</p>
+        <h1 class="hero-title">Premium Electronics<br/><span>&amp; Accessories</span></h1>
+        <p class="hero-subtitle">Handpicked gear that bridges the gap between cheap &amp; low quality, and expensive &amp; overpriced.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+          <a href="about.html" class="btn btn-secondary">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section categories">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="category-grid">
+        <a href="shop.html?cat=phone-cases" class="category-card">
+          <div class="category-icon">📱</div>
+          <h3>Phone Cases</h3>
+          <p>Premium protection, standout style</p>
+        </a>
+        <a href="shop.html?cat=chargers" class="category-card">
+          <div class="category-icon">⚡</div>
+          <h3>Chargers & Cables</h3>
+          <p>Fast, reliable power</p>
+        </a>
+        <a href="shop.html?cat=gadgets" class="category-card">
+          <div class="category-icon">🎮</div>
+          <h3>Gadgets</h3>
+          <p>Trending tech & collectibles</p>
+        </a>
+        <a href="shop.html?cat=accessories" class="category-card">
+          <div class="category-icon">🎧</div>
+          <h3>Accessories</h3>
+          <p>Essentials for everyday</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section featured">
+      <h2 class="section-title">Featured Products</h2>
+      <div class="product-grid" id="featured-products">
+        <!-- Filled by JS -->
+      </div>
+      <a href="shop.html" class="btn btn-outline">View All Products</a>
+    </section>
+
+    <section class="section cta">
+      <div class="cta-content">
+        <h2>Visit Our Stores</h2>
+        <p>Experience our handpicked collection in person. Three locations across Hyderabad.</p>
+        <a href="about.html#stores" class="btn btn-primary">Find a Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <span class="logo">GADGET<span>360</span></span>
+        <p>Premium Electronics & Accessories</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>9848014599</p>
+        <p>Hyderabad, India</p>
+      </div>
+    </div>
+    <p class="footer-copy">© GADGET360 — Curated, not crowded.</p>
+  </footer>
+
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" aria-label="Close cart">×</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
